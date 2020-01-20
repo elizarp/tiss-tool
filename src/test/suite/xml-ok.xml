@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--Gerado por Orizon - Data: 05/07/2014 12:14 - Rev. 1.5-->
+<ans:mensagemTISS xmlns:ans="http://www.ans.gov.br/padroes/tiss/schemas">
+  <ans:cabecalho>
+    <ans:identificacaoTransacao>
+      <ans:tipoTransacao>ENVIO_LOTE_GUIAS</ans:tipoTransacao>
+      <ans:sequencialTransacao>6836</ans:sequencialTransacao>
+      <ans:dataRegistroTransacao>2014-07-05</ans:dataRegistroTransacao>
+      <ans:horaRegistroTransacao>12:11:21.6900000-03:00</ans:horaRegistroTransacao>
+    </ans:identificacaoTransacao>
+    <ans:origem>
+      <ans:codigoPrestadorNaOperadora>
+        <ans:codigoPrestadorNaOperadora>356742</ans:codigoPrestadorNaOperadora>
+      </ans:codigoPrestadorNaOperadora>
+    </ans:origem>
+    <ans:destino>
+      <ans:registroANS>006980</ans:registroANS>
+    </ans:destino>
+    <ans:versaoPadrao>2.02.01</ans:versaoPadrao>
+  </ans:cabecalho>
+  <ans:prestadorParaOperadora>
+    <ans:loteGuias>
+      <ans:numeroLote>6836</ans:numeroLote>
+      <ans:guias>
+        <ans:guiaFaturamento>
+          <ans:guiaConsulta>
+            <ans:identificacaoGuia>
+              <ans:identificacaoFontePagadora>
+                <ans:registroANS>006980</ans:registroANS>
+              </ans:identificacaoFontePagadora>
+              <ans:dataEmissaoGuia>2013-06-27</ans:dataEmissaoGuia>
+              <ans:numeroGuiaPrestador>001</ans:numeroGuiaPrestador>
+              <ans:numeroGuiaOperadora>NUMERO GUIA OPERADOR</ans:numeroGuiaOperadora>
+            </ans:identificacaoGuia>
+            <ans:beneficiario>
+              <ans:numeroCarteira>960017399855008</ans:numeroCarteira>
+              <ans:nomeBeneficiario>TESTE DE CONVERSÃO 2.02.01 para 3.02.00</ans:nomeBeneficiario>
+              <ans:nomePlano>PLANO</ans:nomePlano>
+              <ans:numeroCNS>NUM CARTAO NACI</ans:numeroCNS>
+            </ans:beneficiario>
+            <ans:dadosContratado>
+              <ans:identificacao>
+                <ans:codigoPrestadorNaOperadora>24737882860</ans:codigoPrestadorNaOperadora>
+              </ans:identificacao>
+              <ans:nomeContratado>NOME DO CONTRATADO</ans:nomeContratado>
+              <ans:enderecoContratado>
+                <ans:tipoLogradouro>081</ans:tipoLogradouro>
+                <ans:logradouro>LOGRADOURO POR EXTENSO</ans:logradouro>
+                <ans:numero>NUMER</ans:numero>
+                <ans:complemento>COMPLEMENTO</ans:complemento>
+                <ans:codigoIBGEMunicipio>0050308</ans:codigoIBGEMunicipio>
+                <ans:municipio>São Paulo</ans:municipio>
+                <ans:codigoUF>SP</ans:codigoUF>
+                <ans:cep>08215330</ans:cep>
+              </ans:enderecoContratado>
+              <ans:numeroCNES>CODCNES</ans:numeroCNES>
+            </ans:dadosContratado>
+            <ans:profissionalExecutante>
+              <ans:nomeProfissional>NOME DO PROFISSIONAL</ans:nomeProfissional>
+              <ans:conselhoProfissional>
+                <ans:siglaConselho>CRAS</ans:siglaConselho>
+                <ans:numeroConselho>55555</ans:numeroConselho>
+                <ans:ufConselho>RO</ans:ufConselho>
+              </ans:conselhoProfissional>
+              <ans:cbos>2011</ans:cbos>
+            </ans:profissionalExecutante>
+            <ans:hipoteseDiagnostica>
+              <ans:CID>
+                <ans:nomeTabela>CID-10</ans:nomeTabela>
+                <ans:codigoDiagnostico>F600</ans:codigoDiagnostico>
+                <ans:descricaoDiagnostico>TRANST DE PERSONALIDADE C/INSTAB EMOCIONAL</ans:descricaoDiagnostico>
+              </ans:CID>
+              <ans:tipoDoenca>A</ans:tipoDoenca>
+              <ans:tempoReferidoEvolucaoDoenca>
+                <ans:valor>9</ans:valor>
+                <ans:unidadeTempo>A</ans:unidadeTempo>
+              </ans:tempoReferidoEvolucaoDoenca>
+              <ans:indicadorAcidente>2</ans:indicadorAcidente>
+              <ans:diagnosticoSecundario>
+                <ans:CID>
+                  <ans:nomeTabela>CID-10</ans:nomeTabela>
+                  <ans:codigoDiagnostico>F601</ans:codigoDiagnostico>
+                  <ans:descricaoDiagnostico>CID 2</ans:descricaoDiagnostico>
+                </ans:CID>
+              </ans:diagnosticoSecundario>
+            </ans:hipoteseDiagnostica>
+            <ans:dadosAtendimento>
+              <ans:dataAtendimento>2013-06-27</ans:dataAtendimento>
+              <ans:procedimento>
+                <ans:codigoTabela>00</ans:codigoTabela>
+                <ans:codigoProcedimento>10101012</ans:codigoProcedimento>
+              </ans:procedimento>
+              <ans:tipoConsulta>1</ans:tipoConsulta>
+              <ans:tipoSaida>5</ans:tipoSaida>
+            </ans:dadosAtendimento>
+            <ans:observacao>OBSERVACAO QUE DEVE TER NO MÁXIMO 240 CARACTERES</ans:observacao>
+          </ans:guiaConsulta>
+        </ans:guiaFaturamento>
+      </ans:guias>
+    </ans:loteGuias>
+  </ans:prestadorParaOperadora>
+  <ans:epilogo>
+    <ans:hash>4763F3D5A152EB7C46BB86CDBA0717A9</ans:hash>
+  </ans:epilogo>
+</ans:mensagemTISS>

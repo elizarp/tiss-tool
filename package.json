@@ -1,0 +1,61 @@
+{
+	"name": "tiss-tool",
+	"displayName": "TISS",
+	"description": "Ferramentas para arquivos TISS (Troca de Informação em Saúde Suplementar)",
+	"version": "0.0.1",
+	"publisher": "elizarp",
+	"homepage": "https://github.com/elizarp/tiss-tool/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/elizarp/tiss-tool/issues",
+		"email": "eliezer.zarpelao@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/elizarp/tiss-tool.git"
+	},
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:xml",
+		"onCommand:tiss.quantidadeBeneficiario",
+		"onCommand:tiss.nomeContratado"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "tiss.quantidadeBeneficiario",
+				"title": "Quantidade Beneficiários",
+				"category": "TISS"
+			},
+			{
+				"command": "tiss.nomeContratado",
+				"title": "Nome Contratado",
+				"category": "TISS"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2",
+		"xmldom": "^0.2.1"
+	}
+}
