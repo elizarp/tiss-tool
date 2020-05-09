@@ -2,7 +2,7 @@
 	"name": "tiss-tool",
 	"displayName": "TISS",
 	"description": "Ferramentas para arquivos TISS (Troca de Informação em Saúde Suplementar)",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "elizarp",
 	"homepage": "https://github.com/elizarp/tiss-tool/blob/master/README.md",
 	"bugs": {
