@@ -2,9 +2,15 @@
 	"name": "tiss-tool",
 	"displayName": "TISS",
 	"description": "Ferramentas para arquivos TISS (Troca de Informação em Saúde Suplementar)",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "elizarp",
 	"homepage": "https://github.com/elizarp/tiss-tool/blob/master/README.md",
+	"icon": "icons/tiss-tool.png",
+	"keywords": [
+		"xml",
+		"xsd",
+		"TISS"
+	],
 	"bugs": {
 		"url": "https://github.com/elizarp/tiss-tool/issues",
 		"email": "eliezer.zarpelao@gmail.com"
@@ -23,7 +29,8 @@
 		"onLanguage:xml",
 		"onCommand:tiss.extension.quantidadeBeneficiario",
 		"onCommand:tiss.extension.nomeContratado",
-		"onCommand:tiss.extension.trocaOperadora"
+		"onCommand:tiss.extension.trocaOperadora",
+		"onCommand:tiss.extension.toBase64"
 	],
 	"main": "./out/extension.js",
 	"contributes": {

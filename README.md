@@ -10,7 +10,6 @@ Base64
 
 ## Known Issues
 
-Execução em arquivos fora do formato TISS.
 
 ## Release Notes
 
