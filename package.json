@@ -2,7 +2,7 @@
 	"name": "tiss-tool",
 	"displayName": "TISS",
 	"description": "Ferramentas para arquivos TISS (Troca de Informação em Saúde Suplementar)",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"publisher": "elizarp",
 	"homepage": "https://github.com/elizarp/tiss-tool/blob/master/README.md",
 	"bugs": {
@@ -21,20 +21,31 @@
 	],
 	"activationEvents": [
 		"onLanguage:xml",
-		"onCommand:tiss.quantidadeBeneficiario",
-		"onCommand:tiss.nomeContratado"
+		"onCommand:tiss.extension.quantidadeBeneficiario",
+		"onCommand:tiss.extension.nomeContratado",
+		"onCommand:tiss.extension.trocaOperadora"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "tiss.quantidadeBeneficiario",
+				"command": "tiss.extension.quantidadeBeneficiario",
 				"title": "Quantidade Beneficiários",
 				"category": "TISS"
 			},
 			{
-				"command": "tiss.nomeContratado",
+				"command": "tiss.extension.nomeContratado",
 				"title": "Nome Contratado",
+				"category": "TISS"
+			},
+			{
+				"command": "tiss.extension.trocaOperadora",
+				"title": "Trocar Operadora",
+				"category": "TISS"
+			},
+			{
+				"command": "tiss.extension.toBase64",
+				"title": "Converte XML para Base64",
 				"category": "TISS"
 			}
 		]
