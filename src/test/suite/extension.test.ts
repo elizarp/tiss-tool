@@ -24,7 +24,11 @@ suite('TISS Test Suite', () => {
 			//Act
 			toBase64.toBase64();
 		}).then(x=>{
-			let actualFormattedBase64 = vscode.window.activeTextEditor?.document.getText();
+			let editor = vscode.window.activeTextEditor;
+			if (!editor) { return; }
+			let doc = editor.document;
+			
+			let actualFormattedBase64 = doc.getText();
 			//Assert
 			assert.equal(actualFormattedBase64, expectedBase64, "Actual formatted Base64 does not match expected formatted Base64.");
 		});	

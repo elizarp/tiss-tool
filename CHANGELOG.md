@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+## [0.1.3] - 2020-05-12
+### Changed
+- Adicionada Licença
+- Pequenas correções
+
 ## [0.1.2] - 2020-05-12
 ### Changed
 - Testes base64
