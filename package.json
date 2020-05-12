@@ -2,11 +2,11 @@
 	"name": "tiss-tool",
 	"displayName": "TISS",
 	"description": "Ferramentas para arquivos TISS (Troca de Informação em Saúde Suplementar)",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"publisher": "elizarp",
 	"homepage": "https://github.com/elizarp/tiss-tool/blob/master/README.md",
 	"icon": "icons/tiss-tool.png",
-	"license" : "SEE LICENSE IN https://github.com/elizarp/tiss-tool/blob/master/LICENSE" ,
+	"license": "SEE LICENSE IN https://github.com/elizarp/tiss-tool/blob/master/LICENSE",
 	"keywords": [
 		"xml",
 		"xsd",
@@ -33,7 +33,7 @@
 		"onCommand:tiss.extension.trocaOperadora",
 		"onCommand:tiss.extension.toBase64"
 	],
-	"main": "./out/extension.js",
+	"main": "./dist/extension",
 	"contributes": {
 		"commands": [
 			{
@@ -59,11 +59,15 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile",
-		"test": "node ./out/test/runTest.js"
+		"test": "node ./out/test/runTest.js",
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"test-compile": "tsc -p ./",
+		"lint": "tslint -p ./"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -72,9 +76,12 @@
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.5",
 		"mocha": "^7.1.2",
+		"ts-loader": "^7.0.4",
 		"tslint": "^5.20.0",
-		"typescript": "^3.6.4",
+		"typescript": "^3.8.3",
 		"vscode-test": "^1.3.0",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11",
 		"xmldom": "^0.2.1"
 	}
 }
