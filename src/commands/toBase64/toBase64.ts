@@ -1,11 +1,11 @@
 'use strict';
-import { window, workspace } from 'vscode';
+import { window, workspace, TextDocument } from 'vscode';
 
 
-export async function toBase64() {
+export async function toBase64(): Promise<string> {
 	let editor = window.activeTextEditor;
 	if (!editor) {
-		return;
+		return "";
 	}
 
 	var buffer = new Buffer(editor.document.getText());
@@ -18,5 +18,8 @@ export async function toBase64() {
     .then(document => {
 		console.log("Conversão para base64 efetuada com sucesso!");
 		window.showTextDocument(document);
-    });	
+		return strBase64;
+	});
+	
+	return "";
 }

@@ -1,16 +1,37 @@
 import * as assert from 'assert';
 
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
 import * as vscode from 'vscode';
-// import * as myExtension from '../extension';
+import { TestDataLoader } from "./../utils/test-data-loader";
+import * as toBase64 from './../../commands/toBase64/toBase64';
 
 suite('TISS Test Suite', () => {
 	vscode.window.showInformationMessage('Start all tests.');
+	
+	// Test tiss.extension.trocaOperadora
+	test('Testando Troca Operadora', () => {
+		//Arrange
+		const expectedBase64 = TestDataLoader.load('xml-base64-expected.txt');
+		const unformattedBase64 = TestDataLoader.load('xml-base64-not-encoded.xml');
+		
+		vscode.workspace.openTextDocument({
+			language: "",
+			content: unformattedBase64
+		})
+		.then(document => {
+			console.log("Conversão para base64 efetuada com sucesso!");
+			vscode.window.showTextDocument(document);
+		}).then(x=> {
+			//Act
+			toBase64.toBase64();
+		}).then(x=>{
+			let actualFormattedBase64 = vscode.window.activeTextEditor?.document.getText();
+			//Assert
+			assert.equal(actualFormattedBase64, expectedBase64, "Actual formatted Base64 does not match expected formatted Base64.");
+		});	
 
-	test('Sample test', () => {
-		assert.equal(-1, [1, 2, 3].indexOf(5));
-		assert.equal(-1, [1, 2, 3].indexOf(0));
+		
+
+		
 	});
 
 });
